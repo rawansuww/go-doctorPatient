@@ -20,7 +20,7 @@ func (ac *AuthController) SetupRoutes(rg *gin.RouterGroup) {
 	rg.GET("/register", ac.RegisterUser) //assign route to handler func
 }
 
-//fake constructor
+//fake constructor of AuthController, which takes AuthService
 func NewAuthController(as *services.AuthService) *AuthController {
 	return &AuthController{
 		AuthService: as,

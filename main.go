@@ -14,9 +14,9 @@ func main() {
 			"message": "pong",
 		})
 	})
-	var as *services.AuthService
+	var as *services.AuthService //instantiate an AuthService using its fake constructor
 	as = services.NewAuthService()
-	//declare and init.
+	// := is a symbol to declare and init. .....
 	ac := controllers.AuthController{
 		AuthService: as,
 	}
