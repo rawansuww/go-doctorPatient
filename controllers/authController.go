@@ -1,5 +1,4 @@
 package controllers //packages always in smol letters
-
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/rawansuww/go-doctorpatient/services"
