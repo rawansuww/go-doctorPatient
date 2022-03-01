@@ -16,14 +16,14 @@ func main() {
 	})
 	var as *services.AuthService //instantiate an AuthService using its fake constructor
 	as = services.NewAuthService()
-	// := is a symbol to declare and init. .....
+	// := is a symbol to declare and init.
 	ac := controllers.AuthController{
 		AuthService: as,
 	}
 	var rg gin.RouterGroup
-	rg = *r.Group("/API") //instantiating, creating a routing group
-	ac.SetupRoutes(&rg)   //calling the function
+	rg = *r.Group("/API") //instantiating, creating a routing group for your entire API
+	ac.SetupRoutes(&rg)   //calling the function and passing the pointer with &
 
-	//anything u do after run is blocked
+	//anything u do after run is blocked, so dont put code underneath
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
